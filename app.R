@@ -145,7 +145,7 @@ server <- function(input, output) {
             
             if(boxInput[1] == "C->aT" ){
               output$myImage <- renderImage({
-                filename <- normalizePath(file.path("./", paste(boxInput[1], ' .png', sep='')))
+                filename <- normalizePath(file.path("./assets/", paste(boxInput[1], ' .png', sep='')))
                 list(src = filename,
                      width = 400,
                      height = 500,
@@ -156,7 +156,7 @@ server <- function(input, output) {
             }else{
               
               output$myImage <- renderImage({
-                filename <- normalizePath(file.path("./", paste(' .png', sep='')))
+                filename <- normalizePath(file.path("./assets/", paste(' .png', sep='')))
                 list(src = filename,
                      width = 400,
                      height = 500,
@@ -225,7 +225,7 @@ server <- function(input, output) {
 
       })
       output$myImage <- renderImage({
-        filename <- normalizePath(file.path("./", paste(' .png', sep='')))
+        filename <- normalizePath(file.path("./assets/", paste(' .png', sep='')))
         list(src = filename,
              width = 400,
              height = 500,
